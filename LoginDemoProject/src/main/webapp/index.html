@@ -6,45 +6,32 @@
 </head>
 
 <body>
-<form action="login" method="post">
-<table>
-<tr>
-<td>
-<a>Enter your name</a>
-</td>
-<td>
-<input type = "text" name="Name">
-</td>
-</tr>
-<tr>
-<td>
-<a>Enter your Email id</a>
-</td>
-<td>
-<input type = "text" name="Email">
-</td>
-</tr>
-<tr>
-<td>
-<a>Enter your Employee id</a>
-</td>
-<td>
-<input type = "text" name="EmpId">
-</td>
-</tr>
-<tr>
-<td>
-<a>Enter your Phone No</a>
-</td>
-<td>
-<input type = "text" name="PhoneNo">
-</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"><input  type = "submit" value = "submit"></td>
-</tr>
-</table>
-</form>
+	<form action="login" method="post">
+		<table>
+			<tr>
+				<td><a>Enter your name</a></td>
+				<td><input type="text" name="Name"></td>
+			</tr>
+			<tr>
+				<td><a>Enter your Email id</a></td>
+				<td><input type="email" name="Email"></td>
+			</tr>
+			<tr>
+				<td><a>Enter your Employee id</a></td>
+				<td><input type="number" name="EmpId"></td>
+			</tr>
+			<tr>
+				<td><a>Enter your Phone No</a></td>
+				<td><input type="number" name="PhoneNo"></td>
+			</tr>
+			<tr>
+				<td>
+				<input type="checkbox" id="remember" name="RememberMe" value="rememberme">
+				<label for="remember">remember me</label>
+				</td>
+				<td align="center"><input type="submit" value="submit"></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

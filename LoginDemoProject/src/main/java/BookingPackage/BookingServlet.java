@@ -7,18 +7,24 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class BookingServlet extends HttpServlet{
 
+
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		String emailId = request.getParameter("Email");
-		String empId = request.getParameter("EmpId");
-		String phoneNo = request.getParameter("PhoneNo");
+		HttpSession session = request.getSession(false);
+		
+	
+		
+		String meet ="new meet";
+		session.setAttribute("booking", meet);
 		
 	PrintWriter out = response.getWriter();
 	out.println("this is booking page!!");
+	out.close();
 
 
 	
