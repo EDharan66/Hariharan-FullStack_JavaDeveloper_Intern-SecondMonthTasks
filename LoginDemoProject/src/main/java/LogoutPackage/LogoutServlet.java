@@ -22,11 +22,10 @@ public class LogoutServlet extends HttpServlet{
 		session.invalidate();
 		out.println("sucessfully logout!!");
 		try {
-			Thread.sleep(2000);
-			request.getRequestDispatcher("./index.html").forward(request, response);
+			request.getRequestDispatcher("index.html").include(request, response);
 			
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
+			
 			e.printStackTrace();
 		}finally{
 			out.close();

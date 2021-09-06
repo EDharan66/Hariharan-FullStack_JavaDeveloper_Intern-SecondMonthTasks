@@ -53,7 +53,8 @@ public class LoginServlet extends HttpServlet {
 
 			} else {
 
-				request.getRequestDispatcher("./index.html").forward(request, response);
+//				request.getRequestDispatcher("index.html").include(request, response);
+				response.sendRedirect("index.html");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

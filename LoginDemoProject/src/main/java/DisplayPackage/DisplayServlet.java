@@ -23,7 +23,7 @@ public class DisplayServlet extends HttpServlet{
 			String phoneNo = (String) session.getAttribute("phoneNo");
 			String booking = (String) session.getAttribute("booking");
 			String rememberMe = (String) session.getAttribute("rememberMe");
-			if(booking.equals(null)) {
+			if(booking == null) {
 				booking = "no booking Yet";
 			}
 			
