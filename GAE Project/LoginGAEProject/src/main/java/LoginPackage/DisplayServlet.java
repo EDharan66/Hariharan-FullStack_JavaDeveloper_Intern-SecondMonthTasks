@@ -41,14 +41,28 @@ public class DisplayServlet extends HttpServlet{
 					+ "<head>\r\n"
 					+ "<meta charset=\"ISO-8859-1\">\r\n"
 					+ "<title align=\"center\">this display page!!</title>\r\n"
-					+ "</head><body>");
-			out.println("<table><tr>\r\n"
+					+ "</head>"
+					+ "<style>  \r\n"
+					+ "table {  \r\n"
+					+ "   border: 2px solid blueviolet;  \r\n"
+					+ "   padding: 10px;  \r\n"
+					+ "}  \r\n"
+					+"td {  \r\n"
+					+ "   border: 2px solid maroon;  \r\n"
+					+ "   padding: 10px;  \r\n"
+					+ "} \r\n"
+					+ "td,th{\r\n"
+					+ "padding-bottom: 10px;\r\n"
+					+ "}\r\n"
+					+ "</style><body>");
+			out.println("<h3 align = \"center\" style=\"margin-bottom: 0\";>Display details</h3><br>"
+					+ "<div align =\"center\"><table><tr>\r\n"
 					+ "<th>Name</th> <td>"+name+"</td></tr><tr>\r\n"
 					+ "<th>Email id</th> <td>"+emailId+"</td></tr><tr>\r\n"
 					+ "<th>Employee id</th> <td>"+empId+"</td></tr><tr>\r\n"
 					+ "<th>Phone No</th> <td>"+phoneNo+"</td></tr>"
 					+ "<th>Booking</th> <td>"+booking+"</td></tr>"
-					+ "</table>");
+					+ "</table></div>");
 			
 			if(rememberMe.equals("notRemember")) {
 				session.invalidate();

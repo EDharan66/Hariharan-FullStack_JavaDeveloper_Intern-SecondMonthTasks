@@ -4,41 +4,56 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
+<style>
+table {
+	border: 2px solid blueviolet;
+	padding: 10px;
+}
+
+td, th {
+	padding-bottom: 10px;
+}
+</style>
+
 <body>
-<form action="signup" method="post">
-		<table>
-			<tr>
-				<td><a>Enter your name</a></td>
-				<td><input type="text" name="Name"></td>
-			</tr>
-			<tr>
-				<td><a>Enter your Email id</a></td>
-				<td><input type="email" name="Email"></td>
-			</tr>
-			<tr>
-				<td><a>Enter your Employee id</a></td>
-				<td><input type="number" name="EmpId"></td>
-			</tr>
-			<tr>
-				<td><a>Enter your Phone No</a></td>
-				<td><input type="number" name="PhoneNo"></td>
-			</tr>
-			<tr>
-				<td><a>Enter your Password</a></td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td><a>Enter your Conform Password</a></td>
-				<td><input type="password" name="conformPassword"></td>
-			</tr>
-			<tr>
-				<td>
-				<input type="checkbox" id="remember" name="RememberMe" value="rememberme">
-				<label for="remember">remember me</label>
-				</td>
-				<td align="center"><input type="submit" value="submit"></td>
-			</tr>
-		</table>
-	</form>
+<h1 align="center">SignUp Page!</h1>
+	<div align="center">
+		<form action="signup" method="post">
+			<table>
+				<tr>
+					<td><a>Enter your name</a></td>
+					<td><input type="text" name="Name"></td>
+				</tr>
+				<tr>
+					<td><a>Enter your Email id</a></td>
+					<td><input type="email" name="Email"></td>
+				</tr>
+				<tr>
+					<td><a>Enter your Employee id</a></td>
+					<td><input type="number" name="EmpId"></td>
+				</tr>
+				<tr>
+					<td><a>Enter your Phone No</a></td>
+					<td><input type="number" name="PhoneNo"></td>
+				</tr>
+				<tr>
+					<td><a>Enter your Password</a></td>
+					<td><input type="password" name="password"></td>
+				</tr>
+				<tr>
+					<td><a>Enter your Conform Password</a></td>
+					<td><input type="password" name="conformPassword"></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="remember" name="RememberMe"
+						value="rememberme"> <label for="remember">remember
+							me</label></td>
+					<td align="center"><input type="submit" value="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
 </body>
 </html>

@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Hello App Engine</title>
-  </head>
+<head>
+<meta http-equiv="content-type"
+	content="application/xhtml+xml; charset=UTF-8" />
+<title>LoginPage</title>
+</head>
+<style>  
+table {  
+   border: 2px solid blueviolet;  
+   padding: 10px;  
+}  
+td,th{
+padding-bottom: 10px;
+}
+</style>
+<body>
+	<h1 align="center">Login Page!</h1>
+	<div align="center">
+		<form action="login" method="post">
+			<table>
+				<tr>
+					<td><b>Name:</b></td>
+					<td><input type="text" name="username"></td>
+				
+				</tr>
+				
+				<tr>
+					<td><b>Password:</b></td>
+					<td><input type="password" name="password"></td>
+				</tr>
+				<tr>
+				
+				<th colspan="2"><input type="submit" value="login" /></th>
+				</tr>
+				<tr>
+				<th colspan="2"><a href="SignUpPage.html">Sign Up</a></th>
+				</tr>
+			</table>
+			
+		</form>
+		
+	</div>
 
-  <body>
-    <h1>Hello App Engine!</h1>
-
-    <form action="login" method="post">
-		<table>
-			<tr>
-				<td>Name:</td>
-				<td><input type="text" name="username"></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-		</table>
-		<input type="submit" value="login" />
-	</form>
-	<a href = "SignUpPage.html">Sign Up</a>
-  </body>
+</body>
 </html>
