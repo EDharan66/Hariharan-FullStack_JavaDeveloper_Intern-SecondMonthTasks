@@ -4,12 +4,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LoginServlet extends HttpServlet {
+import org.junit.runner.Request;
+
+@WebServlet(
+	    name = "SingupServlet",
+	    urlPatterns = {"/signup"}
+	)
+public class SingupServlet  extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -25,6 +32,8 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("Name");
 		String empId = request.getParameter("EmpId");
 		String phoneNo = request.getParameter("PhoneNo");
+		String password = request.getParameter("password");
+		String conformPassword = request.getParameter("conformPassword");
 		
 
 		if (request.getParameter("RememberMe") != null) {
@@ -34,27 +43,30 @@ public class LoginServlet extends HttpServlet {
 			out.println("your choose not remember");
 		}
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("name", name);
-		session.setAttribute("emailId", emailId);
-		session.setAttribute("empId", empId);
-		session.setAttribute("phoneNo", phoneNo);
-		session.setAttribute("rememberMe", rememberMe);
+		if(password.equals(conformPassword)) {
+			HttpSession session = request.getSession(true);
+			session.setAttribute("name", name);
+			session.setAttribute("emailId", emailId);
+			session.setAttribute("empId", empId);
+			session.setAttribute("phoneNo", phoneNo);
+			session.setAttribute("rememberMe", rememberMe);
+			session.setAttribute("password", password);
+			session.setAttribute("conformPassword", conformPassword);
+			
+		}
 		
 		
 		try {
-			if (name != "" || name.equals(null)) {
+			if ((name != "" || !name.equals(null)) && password.equals(conformPassword)) {
 
-				out.println("<h3>Hai " + name + "</h3><br>");
-				out.println("<a>booking out slot!<a>"
-						+ "<a href=\"booking\"><input type = \"submit\" value = \"Booking\"></a><br><br>");
-				out.println("<a>display details!<a>"
-						+ "<a href=\"display\"><input type = \"submit\" value = \"Display Detail\"></a><br><br>");
-				out.println("<a>logout!<a>" + "<a href=\"logout\"><input type = \"submit\" value = \"Logout\"></a>");
+				
+				request.getRequestDispatcher("login").include(request, response);
+			
 
 			} else {
 
 //				request.getRequestDispatcher("index.html").include(request, response);
+				
 				response.sendRedirect("index.html");
 			}
 		} catch (Exception e) {
