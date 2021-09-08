@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			if (!validate()) {
 				response.sendRedirect("index.html");
-			} else if (validate() && name.equals(sessionName) && password.equals(sessionPassword)) {
+			} else if (session != null && validate() && name.equals(sessionName) && password.equals(sessionPassword)) {
 
 				out.println("<h3 align = \"center\" style=\"margin-bottom: 0\";>Hai " + sessionName + "</h3><br>");
 				out.println("<div align = \"center\"><table>\r\n" + "				<tr>\r\n"

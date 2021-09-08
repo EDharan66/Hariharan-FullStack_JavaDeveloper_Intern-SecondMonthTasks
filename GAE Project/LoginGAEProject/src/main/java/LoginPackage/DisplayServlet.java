@@ -66,7 +66,7 @@ public class DisplayServlet extends HttpServlet{
 			
 			if(rememberMe.equals("notRemember")) {
 				session.invalidate();
-				out.println("<a href = \"./index.html\"><input type=\"submit\" name=\"home\"></a>");
+				out.println("<div align = \"center\" style=\"margin-top: 10px\"><a href = \"./index.html\" ><input type=\"submit\" name=\"home\"></a><div>");
 			}
 			out.println("</body></html>");
 			out.close();
