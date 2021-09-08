@@ -24,16 +24,9 @@ public class LoginServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE html>\r\n" + "<html>"
-				+ "<style>  \r\n"
-				+ "table {  \r\n"
-				+ "   border: 2px solid darksalmon;  \r\n"
-				+ "   padding: 10px;  \r\n"
-				+ "}  \r\n"
-				+ "td,th{\r\n"
-				+ "padding-bottom: 10px;\r\n"
-				+ "}\r\n"
-				+ "</style><body>");
+		out.println("<!DOCTYPE html>\r\n" + "<html>" + "<style>  \r\n" + "table {  \r\n"
+				+ "   border: 2px solid darksalmon;  \r\n" + "   padding: 10px;  \r\n" + "}  \r\n" + "td,th{\r\n"
+				+ "padding-bottom: 10px;\r\n" + "}\r\n" + "</style><body>");
 
 		name = request.getParameter("username");
 		password = request.getParameter("password");
@@ -54,24 +47,20 @@ public class LoginServlet extends HttpServlet {
 		try {
 			if (!validate()) {
 				response.sendRedirect("index.html");
-			} else if (validate()&&name.equals(sessionName) && password.equals(sessionPassword)) {
+			} else if (validate() && name.equals(sessionName) && password.equals(sessionPassword)) {
 
 				out.println("<h3 align = \"center\" style=\"margin-bottom: 0\";>Hai " + sessionName + "</h3><br>");
-				out.println("<div align = \"center\"><table>\r\n"
-						+ "				<tr>\r\n"
+				out.println("<div align = \"center\"><table>\r\n" + "				<tr>\r\n"
 						+ "					<td><b><a>Display details<a></b></td>\r\n"
 						+ "					<td><a href=\"display\"><input type = \"submit\" value = \"Display Detail\"></a></td>\r\n"
-						+ "				\r\n"
-						+ "				</tr>\r\n"
-						+ "				\r\n"
-						+ "				<tr>\r\n"
-						+ "					<td><b><a>Logout<a></b></td>\r\n"
+						+ "				\r\n" + "				</tr>\r\n" + "				\r\n"
+						+ "				<tr>\r\n" + "					<td><b><a>Logout<a></b></td>\r\n"
 						+ "					<td><a href=\"logout\"><input type = \"submit\" value = \"Logout\"></a></td>\r\n"
-						+ "				</tr>\r\n"
-						+ "			</table></div>");
-				
-			} else if(session != null) {
-				out.println("<p align=\"center\">your password/name is incorrect, Please enter correctly or signup new!!<p>");
+						+ "				</tr>\r\n" + "			</table></div>");
+
+			} else if (session != null) {
+				out.println(
+						"<p align=\"center\">your password/name is incorrect, Please enter correctly or signup new!!<p>");
 				request.getRequestDispatcher("index.html").include(request, response);
 
 			}

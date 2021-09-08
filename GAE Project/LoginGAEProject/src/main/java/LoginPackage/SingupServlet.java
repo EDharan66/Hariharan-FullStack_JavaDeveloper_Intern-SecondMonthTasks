@@ -54,7 +54,7 @@ public class SingupServlet extends HttpServlet {
 				request.getRequestDispatcher("index.html").include(request, response);
 
 			} else if (!password.equals(conformPassword)) {
-				out.println("<p align=\"center\">your password and confrom password not match please retry!!</p>");
+				out.println("<p align=\"center\">your password and confirm password not match please retry!!</p>");
 				request.getRequestDispatcher("SignUpPage.html").include(request, response);
 
 //				response.sendRedirect("index.html");
