@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.cantactapp.service.ContactEntity;
-import com.cantactapp.service.OfyService;
+import com.contactapp.service.ContactEntity;
+import com.contactapp.service.OfyService;
 
 @WebServlet(name = "DeletePageServlet", urlPatterns = { "/deletepage" })
 public class DeletePageServlet extends HttpServlet{

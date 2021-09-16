@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.cantactapp.service.ContactEntity;
-import com.cantactapp.service.OfyService;
+import com.contactapp.service.ContactEntity;
+import com.contactapp.service.OfyService;
 import com.google.appengine.api.search.query.QueryParser.value_return;
 
 

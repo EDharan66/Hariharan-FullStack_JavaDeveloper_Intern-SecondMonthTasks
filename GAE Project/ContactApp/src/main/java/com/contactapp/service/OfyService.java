@@ -1,4 +1,4 @@
-package com.cantactapp.service;
+package com.contactapp.service;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

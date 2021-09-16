@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.junit.runner.Request;
 
-import com.cantactapp.service.OfyService;
+import com.contactapp.service.OfyService;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.cmd.LoadType;
 
