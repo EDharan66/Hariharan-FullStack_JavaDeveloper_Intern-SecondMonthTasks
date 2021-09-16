@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+table {
+	border: 2px solid blueviolet;
+	padding: 10px;
+}
+
+td, th {
+	padding-bottom: 10px;
+}
+</style>
+
+<body>
+<h4 align="center" style="padding-top: 20px">Update profile</h4>
+	<div align="center">
+		<form action="editprofile" method="post">
+			<table>
+				<tr>
+					<td><b>Choose for update:</b></td>
+					<td><select name="forUpdate" id="search">
+							<option value="name">Name</option>
+							<option value="phoneNo">Phone No</option>
+							<option value="mailId">Mail Id</option>
+							<option value="empId">Employee ID</option>
+							<option value="password">Password</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><b>Enter the value : </b></td>
+					<td><input type="text" name="value"></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+
+
+
+			<input type="hidden" name="message" value="updated">
+		
+		</form>
+	</div>
+
+</body>
+</html>

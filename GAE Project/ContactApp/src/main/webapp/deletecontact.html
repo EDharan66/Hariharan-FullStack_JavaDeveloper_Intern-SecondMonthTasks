@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete contact</title>
+</head>
+<style>
+table {
+	border: 2px solid blueviolet;
+	padding: 10px;
+}
+
+td, th {
+	padding-bottom: 10px;
+}
+</style>
+
+<body>
+<h4 align="center">Delete contact</h4>
+	<div align="center">
+		<form action="deletepage" method="post">
+			<table>
+				<tr>
+					<td><b>Enter the contact id : </b></td>
+					<td><input type="text" name="contactid"></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+			<input type="hidden" name="message" value="deleting"> <br>
+			
+		</form>
+	</div>
+
+</body>
+</html>

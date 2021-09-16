@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>search</title>
+</head>
+<style>
+table {
+	border: 2px solid blueviolet;
+	padding: 10px;
+}
+
+td, th {
+	padding-bottom: 10px;
+}
+</style>
+
+<body>
+<h4 align="center">Search contact</h4>
+	<div align="center">
+		<form action="searchpage" method="post">
+			<table>
+				<tr>
+					<td><b>Choose for search:</b></td>
+					<td><select name="searchlist" id="search">
+							<option value="name">Name</option>
+							<option value="phoneNo">Phone No</option>
+							<option value="mailId">Mail Id</option>
+							<option value="empId">Employee ID</option>
+							<option value="all">all</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><b>Enter the value : </b></td>
+					<td><input type="text" name="value" placeholder="*if choose all enter any value"></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+
+
+
+			<input type="hidden" name="message" value="display"> <br>
+		
+		</form>
+	</div>
+
+</body>
+</html>
