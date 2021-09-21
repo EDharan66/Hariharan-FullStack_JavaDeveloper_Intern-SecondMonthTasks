@@ -33,7 +33,7 @@ public class DisplayPageServlet extends HttpServlet {
 		message = (String)session.getAttribute("message");
 		searchlist = (String)session.getAttribute("searchlist");
 
-	
+		request.getRequestDispatcher("contactpage").include(request, response);
 		
 		out.println("<style>\r\n"
 				+ "table.display {\r\n"
@@ -43,7 +43,7 @@ public class DisplayPageServlet extends HttpServlet {
 				+ "}\r\n"
 				+ "\r\n"
 				+ "td, th {\r\n"
-				+ "	padding-bottom: 10px;\r\n"
+				+ "	padding: 10px;\r\n"
 				+ "}\r\n"
 				+ "</style>");
 		

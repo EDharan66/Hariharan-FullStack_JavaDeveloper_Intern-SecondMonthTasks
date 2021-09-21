@@ -21,7 +21,7 @@ public class IndexServlet extends HttpServlet{
 		
 		request.getRequestDispatcher("index.html").include(request, response);
 		request.getRequestDispatcher("login.html").include(request, response);
-//		out.println("this is do get");
+		//		out.println("this is do get");
 		
 		out.close();
 	}
