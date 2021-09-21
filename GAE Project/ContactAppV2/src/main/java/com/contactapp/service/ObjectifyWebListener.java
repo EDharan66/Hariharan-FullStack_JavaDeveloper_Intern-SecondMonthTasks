@@ -4,8 +4,6 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 
-import com.contactapp.service.LoginEntity;
-import com.contactapp.servlet.bean.ContactEntity;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 

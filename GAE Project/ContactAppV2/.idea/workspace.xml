@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6ce03dc-eb9e-4064-b709-c8dd2af273f7" name="Default Changelist" comment="" />
+    <list default="true" id="a6ce03dc-eb9e-4064-b709-c8dd2af273f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/model/ContactUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/model/UserUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/service/ContactAppApiConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ContactSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/controller/ContactAppUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/controller/ContactAppUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/model/ProfileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/model/ProfileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/service/LoginEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/service/LoginEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/service/ObjectifyWebListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/service/ObjectifyWebListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ContactSearchServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ContactServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ContactServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/HomePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/HomePageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ProfilePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/ProfilePageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/SignOutClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/SignOutClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/SignUpServlet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contactapp/servlet/bean/ContactEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contactapp/service/ContactEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/indexv2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/indexv2.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +37,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1yR2NCVncvBnwTwu5vteH0aAGhM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,9 +53,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,6 +77,7 @@
       <workItem from="1632200193783" duration="1812000" />
       <workItem from="1632228433727" duration="677000" />
       <workItem from="1632229279673" duration="1470000" />
+      <workItem from="1632233562775" duration="11013000" />
     </task>
     <servers />
   </component>
@@ -55,25 +85,49 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1632230230791">
+    <state x="361" y="76" width="814" height="728" key="#Intentions" timestamp="1632242028439">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1632230230791" />
+    <state x="361" y="76" width="814" height="728" key="#Intentions/0.0.1536.834@0.0.1536.834" timestamp="1632242028439" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1632236553803">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1632236553803" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1632229047178">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1632229047178" />
+    <state x="584" y="351" key="ReplaceDuplicatesPrompt" timestamp="1632235889142">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="584" y="351" key="ReplaceDuplicatesPrompt/0.0.1536.834@0.0.1536.834" timestamp="1632235889142" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1632229060460">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="170" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1632229060460" />
+    <state x="618" y="332" key="VCS.ChangelistChooser" timestamp="1632234670924">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="618" y="332" key="VCS.ChangelistChooser/0.0.1536.834@0.0.1536.834" timestamp="1632234670924" />
     <state x="526" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1632200492073">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="526" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1632200492073" />
-    <state x="431" y="155" key="search.everywhere.popup" timestamp="1632230218352">
+    <state x="499" y="168" key="extract.method.dialog" timestamp="1632243423415">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1632230218352" />
+    <state x="499" y="168" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1632243423415" />
+    <state x="176" y="197" width="727" height="534" key="find.popup" timestamp="1632241033195">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="176" y="197" width="727" height="534" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1632241033195" />
+    <state x="562" y="165" key="refactoring.ChangeSignatureDialog" timestamp="1632242051328">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="562" y="165" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1632242051328" />
+    <state x="431" y="155" key="search.everywhere.popup" timestamp="1632241158405">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1632241158405" />
   </component>
 </project>

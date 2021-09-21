@@ -28,49 +28,50 @@ public class LoginEntity {
 		this.password = password;
 		
 	}
-	
-	
+
+
 	public Long getEmpId() {
 		return empId;
 	}
+
+	public LoginEntity setEmpId(Long empId) {
+		this.empId = empId;
+		return this;
+	}
+
 	public String getEmailId() {
 		return emailId;
 	}
+
+	public LoginEntity setEmailId(String emailId) {
+		this.emailId = emailId;
+		return this;
+	}
+
 	public String getName() {
 		return name;
 	}
+
+	public LoginEntity setName(String name) {
+		this.name = name;
+		return this;
+	}
+
 	public String getPhoneNo() {
 		return phoneNo;
 	}
+
+	public LoginEntity setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+		return this;
+	}
+
 	public String getPassword() {
 		return password;
 	}
 
-
-	public void setEmpId(Long empId) {
-		this.empId = empId;
-	}
-
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
-	}
-
-
-	public void setPassword(String password) {
+	public LoginEntity setPassword(String password) {
 		this.password = password;
+		return this;
 	}
-	
-	
-	
 }

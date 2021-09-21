@@ -9,12 +9,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/login")
-public class LoginServlet extends HttpServlet {
 
+@WebServlet (name = "SignUpServlet", urlPatterns = "/signup")
+public class SignUpServlet extends HttpServlet{
+
+	/**
+	 *
+	 * @param request
+	 * @param response
+	 */
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserUtil.getInstance(request, response).processLogin();
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		UserUtil.getInstance(request, response).processSignUp();
 	}
-
+	
 }

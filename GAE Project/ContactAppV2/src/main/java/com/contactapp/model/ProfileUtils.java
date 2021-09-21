@@ -3,16 +3,22 @@ package com.contactapp.model;
 import com.contactapp.controller.ContactAppUtil;
 import com.contactapp.service.LoginEntity;
 import com.contactapp.service.ObjectifyWebListener;
-import com.contactapp.servlet.bean.ApiResponce;
 import com.google.gson.Gson;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.util.Collections;
 import java.util.Objects;
 
-import static com.contactapp.controller.ContactAppUtil.writeResponce;
+import static com.contactapp.service.ContactAppApiConstant.ApiError.error;
+import static com.contactapp.service.ContactAppApiConstant.ApiError.success;
+import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.FAILED;
+import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.OK;
+import static com.contactapp.service.ContactAppApiConstant.Basic.*;
+import static com.contactapp.service.ContactAppApiConstant.ERROR;
+import static com.contactapp.service.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.controller.ContactAppUtil.apiResponseWriter;
+import static com.contactapp.controller.ContactAppUtil.writeResponse;
 
 public class ProfileUtils {
 
@@ -31,29 +37,63 @@ public class ProfileUtils {
         return new ProfileUtils(request, response);
     }
 
-    public void processPOST() {
-        LoginEntity loginEntity = new Gson().fromJson(ContactAppUtil.getRequestBody(request), LoginEntity.class);
-
-
-        HttpSession session = request.getSession(false);
-
-        if (Objects.nonNull(session)) {
-            loginEntity.setEmpId(Long.parseLong((String) session.getAttribute("empId")));
-        }
-
-        try {
-            if (postValidate(loginEntity)) {
-                ObjectifyWebListener.ofy().save().entities(loginEntity).now();
-                writeResponce(response, new ApiResponce("SUCESS", "sucessfuly login", "sucess", Collections.singletonMap("id", loginEntity.getEmpId())), 200);
-                return;
-            }
-        } catch (Exception ignored) {
-        }
-        writeResponce(response, new ApiResponce("ERROR", "failed login", "error", Collections.singletonMap("id", loginEntity.getEmpId())), 400);
-
+    private HttpSession getSession() {
+        return request.getSession(false);
     }
 
     private boolean postValidate(LoginEntity loginEntity) {
         return !loginEntity.getName().isEmpty() && !loginEntity.getEmailId().isEmpty() && !loginEntity.getEmpId().toString().isEmpty() && !loginEntity.getPhoneNo().isEmpty();
     }
+
+    private String getEmpId() {
+        return (String) getSession().getAttribute(empId);
+    }
+
+    public void processPOST() {
+        LoginEntity loginEntity = new Gson().fromJson(ContactAppUtil.getRequestBody(request), LoginEntity.class);
+
+        HttpSession session = getSession();
+        if (Objects.nonNull(session)) {
+            loginEntity.setEmpId(Long.parseLong((String) session.getAttribute("empId")));
+        }
+        try {
+            if (postValidate(loginEntity)) {
+                ObjectifyWebListener.ofy().save().entities(loginEntity).now();
+                apiResponseWriter(response,SUCCESS, successfully_login, success, loginEntity.getEmpId(), OK);
+                return;
+            }
+        } catch (Exception ignored) {
+        }
+        apiResponseWriter(response,ERROR, failed_login, error, loginEntity.getEmpId(), FAILED);
+
+    }
+
+    public void processDelete() {
+        try {
+            LoginEntity entity = new LoginEntity().setEmpId(Long.parseLong(Objects.requireNonNull(getEmpId())));
+            ObjectifyWebListener.ofy().delete().type(LoginEntity.class).id(entity.getEmpId()).now();
+            apiResponseWriter(response,SUCCESS, successfully_delete, success, entity.getEmpId(), OK);
+            getSession().invalidate();
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        apiResponseWriter(response,ERROR, failed_delete, error, null, FAILED);
+
+    }
+
+    public void processGET() {
+        try {
+            LoginEntity entity = new LoginEntity().setEmpId(Long.parseLong(Objects.requireNonNull(getEmpId())));
+            entity = ObjectifyWebListener.ofy().load().type(LoginEntity.class).id(entity.getEmpId()).now();
+            writeResponse(response, entity, OK);
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        apiResponseWriter(response,ERROR, failed_get, error, null, FAILED);
+    }
+
+
+
 }
