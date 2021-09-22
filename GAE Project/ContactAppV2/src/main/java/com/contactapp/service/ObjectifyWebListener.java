@@ -3,7 +3,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-
+import com.contactapp.bean.ContactEntity;
+import com.contactapp.bean.LoginEntity;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 

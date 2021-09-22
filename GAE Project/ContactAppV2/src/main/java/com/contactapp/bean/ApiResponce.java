@@ -1,4 +1,4 @@
-package com.contactapp.servlet.bean;
+package com.contactapp.bean;
 
 import java.util.HashMap;
 import java.util.Map;

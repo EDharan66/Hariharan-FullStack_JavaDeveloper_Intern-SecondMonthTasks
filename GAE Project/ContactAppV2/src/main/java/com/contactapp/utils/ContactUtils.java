@@ -1,21 +1,22 @@
-package com.contactapp.model;
+package com.contactapp.utils;
 
-import com.contactapp.service.ContactAppApiConstant;
+import com.contactapp.bean.ContactEntity;
+import com.contactapp.constants.ContactAppApiConstant;
+import com.contactapp.constants.ContactAppApiConstant.Basic;
 import com.contactapp.controller.ContactAppUtil;
 import com.contactapp.service.ObjectifyWebListener;
-import com.contactapp.service.ContactEntity;
 import com.google.gson.Gson;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static com.contactapp.service.ContactAppApiConstant.ApiError.error;
-import static com.contactapp.service.ContactAppApiConstant.ApiError.success;
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.FAILED;
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.OK;
-import static com.contactapp.service.ContactAppApiConstant.Basic.*;
-import static com.contactapp.service.ContactAppApiConstant.ERROR;
-import static com.contactapp.service.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.constants.ContactAppApiConstant.ERROR;
+import static com.contactapp.constants.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.constants.ContactAppApiConstant.ApiError.error;
+import static com.contactapp.constants.ContactAppApiConstant.ApiError.success;
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.FAILED;
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
+import static com.contactapp.constants.ContactAppApiConstant.Basic.*;
 import static com.contactapp.controller.ContactAppUtil.apiResponseWriter;
 
 public class ContactUtils {

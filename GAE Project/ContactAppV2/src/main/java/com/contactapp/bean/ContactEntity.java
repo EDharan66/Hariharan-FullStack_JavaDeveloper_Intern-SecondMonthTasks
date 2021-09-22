@@ -1,4 +1,4 @@
-package com.contactapp.service;
+package com.contactapp.bean;
 
 import com.google.gson.Gson;
 import com.googlecode.objectify.annotation.Entity;

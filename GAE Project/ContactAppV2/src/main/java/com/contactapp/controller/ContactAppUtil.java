@@ -1,20 +1,21 @@
 package com.contactapp.controller;
 
-import com.contactapp.servlet.bean.ApiResponce;
+import com.contactapp.bean.ApiResponce;
 import com.google.gson.Gson;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import static com.contactapp.constants.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.constants.ContactAppApiConstant.ApiError.success;
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
+import static com.contactapp.constants.ContactAppApiConstant.Basic.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
-
-import static com.contactapp.service.ContactAppApiConstant.ApiError.success;
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.OK;
-import static com.contactapp.service.ContactAppApiConstant.Basic.*;
-import static com.contactapp.service.ContactAppApiConstant.SUCCESS;
 
 public class ContactAppUtil {
 

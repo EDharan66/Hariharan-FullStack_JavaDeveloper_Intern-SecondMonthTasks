@@ -1,7 +1,7 @@
-package com.contactapp.model;
+package com.contactapp.utils;
 
+import com.contactapp.bean.LoginEntity;
 import com.contactapp.controller.ContactAppUtil;
-import com.contactapp.service.LoginEntity;
 import com.contactapp.service.ObjectifyWebListener;
 import com.google.gson.Gson;
 
@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Objects;
 
-import static com.contactapp.service.ContactAppApiConstant.ApiError.error;
-import static com.contactapp.service.ContactAppApiConstant.ApiError.success;
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.FAILED;
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.OK;
-import static com.contactapp.service.ContactAppApiConstant.Basic.*;
-import static com.contactapp.service.ContactAppApiConstant.ERROR;
-import static com.contactapp.service.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.constants.ContactAppApiConstant.ERROR;
+import static com.contactapp.constants.ContactAppApiConstant.SUCCESS;
+import static com.contactapp.constants.ContactAppApiConstant.ApiError.error;
+import static com.contactapp.constants.ContactAppApiConstant.ApiError.success;
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.FAILED;
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
+import static com.contactapp.constants.ContactAppApiConstant.Basic.*;
 import static com.contactapp.controller.ContactAppUtil.apiResponseWriter;
 
 public class UserUtil {
@@ -66,9 +66,11 @@ public class UserUtil {
 
     public void processSignUp() {
         LoginEntity entity = new Gson().fromJson(ContactAppUtil.getRequestBody(request), LoginEntity.class);
+        
         try {
             if (postValidate(entity)) {
                 loadSession(entity.getEmpId().toString(), request);
+                
                 ObjectifyWebListener.ofy().save().entities(entity).now();
                 apiResponseWriter(response, SUCCESS, successfully_sign_up, success, entity.getEmpId(), OK);
                 return;

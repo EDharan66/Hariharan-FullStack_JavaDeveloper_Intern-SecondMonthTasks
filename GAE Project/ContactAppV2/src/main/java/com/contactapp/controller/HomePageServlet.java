@@ -1,4 +1,6 @@
-package com.contactapp.servlet;
+package com.contactapp.controller;
+
+import static com.contactapp.constants.ContactAppApiConstant.HOME_PAGE;
 
 import java.io.IOException;
 
@@ -7,8 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import static com.contactapp.service.ContactAppApiConstant.HOME_PAGE;
 
 @WebServlet(name = "HomePageServlet", urlPatterns = { "/home" })
 public class HomePageServlet extends HttpServlet{

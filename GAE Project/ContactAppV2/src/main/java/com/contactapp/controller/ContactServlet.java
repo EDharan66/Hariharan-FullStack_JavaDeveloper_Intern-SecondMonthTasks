@@ -1,11 +1,11 @@
-package com.contactapp.servlet;
-
-import com.contactapp.model.ContactUtils;
+package com.contactapp.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.contactapp.utils.ContactUtils;
 
 
 @WebServlet(name = "ContactServlet", urlPatterns = "/contact")

@@ -1,4 +1,4 @@
-package com.contactapp.service;
+package com.contactapp.constants;
 
 public class ContactAppApiConstant {
     public static final String SUCCESS = "SUCCESS";

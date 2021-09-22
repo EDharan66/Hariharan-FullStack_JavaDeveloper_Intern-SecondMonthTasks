@@ -68,6 +68,7 @@ form .row .col.s12 {
 							<option value="name">Name</option>
 							<option value="phoneNo">Phone No</option>
 							<option value="emailId">Mail Id</option>
+							<option value="empId">Employee Id</option>
 						</select>
 					</div>
 					<div class="col s7">
@@ -216,8 +217,8 @@ form .row .col.s12 {
 									<div class="row">
 										<div class=" col s12">
 											<h5>
-												<span id="statusText">Update</span> contact <span
-													id="contactName"></span>
+												<span id="statusText" >Update</span> Profile <span
+													id="profileNameInput"></span>
 											</h5>
 										</div>
 									</div>
@@ -381,7 +382,7 @@ form .row .col.s12 {
             console.log({inputSearch, inputSearchDrop})
 
             document.getElementById("resultRen").innerHTML = resLocal.filter(it => {
-                return it[inputSearchDrop].includes(inputSearch)
+                return it[inputSearchDrop].toString().includes(inputSearch)
             }).map(it => {
                 return "<tr><td>" + it.empId + "</td><td>" + it.name + "</td><td>" + it.emailId + "</td><td>" + it.phoneNo + "</td><td> <i class='tiny material-icons cp' onclick='editFun(" + it.empId + ")'>edit</i></td><td> <i class='tiny material-icons cp' onclick='deleteFun(" + it.empId + ")'>delete</i></td></tr>"
             }).toString().replace(/,/g, '');

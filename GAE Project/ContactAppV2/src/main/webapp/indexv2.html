@@ -72,27 +72,27 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="signUpname" type="text" class="validate" name="name">
-                                        <label for="signUpname">Name</label>
+                                        <label for="signUpname" onkeyup="signupValidate()">Name</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="signUpemailId" type="email" class="validate"
-                                               name="signUpemailId"> <label for="emailId">Email
+                                               name="signUpemailId" onkeyup="signupValidate()"> <label for="signUpemailId">Email
                                         Id</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="signUpempId" type="text" class="validate"
-                                               name="signUpempId"> <label for="signUpempId">Employee
+                                               name="signUpempId" onkeyup="signupValidate()"> <label for="signUpempId">Employee
                                         Id</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="signUpphoneNo" type="text" class="validate"
-                                               name="signUpphoneNo"> <label for="phoneNo">Phone
+                                               name="signUpphoneNo" onkeyup="signupValidate()"> <label for="signUpphoneNo">Phone
                                         No</label>
                                     </div>
                                 </div>
@@ -100,13 +100,13 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="signUpPassword" type="password" class="validate"
-                                               name="signUppassword"> <label for="signUpPassword">Password</label>
+                                               name="signUppassword" onkeyup="signupValidate()"> <label for="signUpPassword">Password</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="conformPassword" type="password" class="validate"
-                                               name="confrimPassword"> <label for="conformPassword">Conform
+                                               name="confrimPassword" onkeyup="signupValidate()"> <label for="conformPassword">Conform
                                         Password</label>
                                     </div>
                                 </div>
@@ -175,8 +175,6 @@
             document.getElementById("loginBtn").setAttribute("disabled", "disabled")
         }
     }
-    
-    
 
     var validate = (empId, password) => {
         if (empId != "" && password != "") {
@@ -194,7 +192,7 @@
         }
     }
     
-    var localSignInValidate = ()=>{
+    var signupValidate = ()=>{
     	const inputSignUpname = document.getElementById("signUpname").value;
         const inputSignUpemailId = document.getElementById("signUpemailId").value;
         const inputSignUpempId = document.getElementById("signUpempId").value;
@@ -226,7 +224,7 @@
                 document.getElementById("signUpemailId").className = "validate invalid";
                 document.getElementById("signUpempId").className = "validate invalid";
                 document.getElementById("signUpphoneNo").className = "validate invalid";
-                document.getElementById("signUppassword").className = "validate invalid";
+                document.getElementById("signUpPassword").className = "validate invalid";
                 document.getElementById("conformPassword").className = "validate invalid";
             });
         } catch (e) {

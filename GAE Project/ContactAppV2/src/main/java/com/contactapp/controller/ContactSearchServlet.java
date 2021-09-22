@@ -1,15 +1,14 @@
-package com.contactapp.servlet;
+package com.contactapp.controller;
 
-import com.contactapp.controller.ContactAppUtil;
+import com.contactapp.bean.ContactEntity;
 import com.contactapp.service.ObjectifyWebListener;
-import com.contactapp.service.ContactEntity;
+
+import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import static com.contactapp.service.ContactAppApiConstant.ApiStatusCode.OK;
 
 
 @WebServlet(name = "ContactSearchServlet", urlPatterns = { "/search" })

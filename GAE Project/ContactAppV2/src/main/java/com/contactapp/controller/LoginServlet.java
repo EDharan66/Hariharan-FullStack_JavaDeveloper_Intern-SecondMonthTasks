@@ -1,12 +1,13 @@
-package com.contactapp.servlet;
-
-import com.contactapp.model.UserUtil;
+package com.contactapp.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.contactapp.utils.UserUtil;
+
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")

@@ -1,4 +1,4 @@
-package com.contactapp.servlet;
+package com.contactapp.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.contactapp.controller.ContactAppUtil;
-import com.contactapp.servlet.bean.ApiResponce;
+import com.contactapp.bean.ApiResponce;
 import com.google.gson.Gson;
 
 @WebServlet(name = "SignOutClass", urlPatterns = "/signout")
