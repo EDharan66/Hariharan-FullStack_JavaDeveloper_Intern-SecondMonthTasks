@@ -37,7 +37,7 @@ form .row .col.s12 {
 			<a href="#" class="brand-logo" style="padding-left: 15px;">Welcome
 				to Contact App</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="nameWel">name</a></li>
+				<li><a id="nameWel" onclick="instancesModelTab.select('test2');">name</a></li>
 				<li><a onclick="signOutCall()">sign out</a></li>
 			</ul>
 		</div>
@@ -136,6 +136,10 @@ form .row .col.s12 {
 							</div>
 						</div>
 
+						<button type="button"
+							class="waves-effect waves-light btn btn-small left center blue" onclick="contactCancelBtn()">
+							<span >cancel</span>
+						</button>
 
 						<button type="submit"
 							class="waves-effect waves-light btn btn-small right center blue">
@@ -159,52 +163,52 @@ form .row .col.s12 {
 					<div class="col s12">
 						<div class="card blue-grey darken-1">
 							<div class="card-content white-text">
-								<div >
+								<div>
 									<span class="card-title"
 										style="font-weight: 400; font-size: x-large;">Welcome <span
-										id="profileNameS1">name</span>! profile 
-										<i class="material-icons right cp" id = "closePanalIcon" onclick="profileEditCancel()" style = "display:none">close</i>
+										id="profileNameS1">name</span>! profile <i
+										class="material-icons right cp" id="closePanalIcon"
+										onclick="profileEditCancel()" style="display: none">close</i>
 										<i class="material-icons right cp" onclick="profileEdit()">edit</i>
 										<i class="material-icons right cp" onclick="profileDelete()">delete</i>
-										</span>
-										</span>
-										<div id="profileViewPanal">
-										<table class = "profileDisplay" style="display: contents;" >
-										<tr>
-											<th>Name:
-											<th>
-											<td><p>
-													<span id="profileName">name</span>
-												</p>
-											<td>
-										</tr>
-										<tr>
-											<th>Email Id:
-											<th>
-											<td><p>
-													<span id="profileEmail">email</span>
-												</p>
-											<td>
-										</tr>
-										<tr>
-											<th>Employee Id:
-											<th>
-											<td><p>
-													<span id="profileEmpId">employee id</span>
-												</p>
-											<td>
-										</tr>
-										<tr>
-											<th>Phone No:
-											<th>
-											<td><p>
-													<span id="profilePhoneNo">phone No</span>
-												</p>
-											<td>
-										</tr>
-									</table>
-										</div>
-									
+									</span> </span>
+									<div id="profileViewPanal">
+										<table class="profileDisplay" style="display: contents;">
+											<tr>
+												<th>Name:
+												<th>
+												<td><p>
+														<span id="profileName">name</span>
+													</p>
+												<td>
+											</tr>
+											<tr>
+												<th>Email Id:
+												<th>
+												<td><p>
+														<span id="profileEmail">email</span>
+													</p>
+												<td>
+											</tr>
+											<tr>
+												<th>Employee Id:
+												<th>
+												<td><p>
+														<span id="profileEmpId">employee id</span>
+													</p>
+												<td>
+											</tr>
+											<tr>
+												<th>Phone No:
+												<th>
+												<td><p>
+														<span id="profilePhoneNo">phone No</span>
+													</p>
+												<td>
+											</tr>
+										</table>
+									</div>
+
 
 
 
@@ -216,9 +220,9 @@ form .row .col.s12 {
 
 									<div class="row">
 										<div class=" col s12">
-											<h5>
-												<span id="statusText" >Update</span> Profile <span
-													id="profileNameInput"></span>
+											<h5 style="color: black; padding-top: 15px;">
+												<span id="statusText">Update</span> Profile <span
+													id="profileNameEditHead">name</span>
 											</h5>
 										</div>
 									</div>
@@ -289,7 +293,7 @@ form .row .col.s12 {
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script type="text/javascript">
-    M.Tabs.init(document.getElementById("tabs-swipe-demo"));
+    var instancesModelTab = M.Tabs.init(document.getElementById("tabs-swipe-demo"));
     document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems);
@@ -416,6 +420,11 @@ form .row .col.s12 {
         document.getElementById("signUpphoneNo").value = empObj.phoneNo;
         document.querySelectorAll('[for="signUpphoneNo"]')[0].className = "active"
     }
+    
+    var contactCancelBtn = ()=>{
+    	document.getElementById("empTabList").className = "col s12";
+        document.getElementById("editPanal").style.display = "none";
+    }
     var deleteId;
     var deleteFun = (id) => {
         
@@ -516,6 +525,7 @@ form .row .col.s12 {
         document.getElementById("profileEditPanal").style.display = "block";
         document.getElementById("closePanalIcon").style.display="block";
 
+        document.getElementById("profileNameEditHead").innerText = profileObj.name;
         document.getElementById("profileNameInput").value = profileObj.name;
         document.querySelectorAll('[for="profileNameInput"]')[0].className = "active"
 

@@ -2,6 +2,7 @@ package com.contactapp.controller;
 
 import com.contactapp.bean.ContactEntity;
 import com.contactapp.service.ObjectifyWebListener;
+import com.contactapp.utils.ContactAppUtil;
 
 import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
 

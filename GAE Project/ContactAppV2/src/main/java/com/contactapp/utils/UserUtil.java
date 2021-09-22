@@ -1,7 +1,6 @@
 package com.contactapp.utils;
 
 import com.contactapp.bean.LoginEntity;
-import com.contactapp.controller.ContactAppUtil;
 import com.contactapp.service.ObjectifyWebListener;
 import com.google.gson.Gson;
 
@@ -17,7 +16,7 @@ import static com.contactapp.constants.ContactAppApiConstant.ApiError.success;
 import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.FAILED;
 import static com.contactapp.constants.ContactAppApiConstant.ApiStatusCode.OK;
 import static com.contactapp.constants.ContactAppApiConstant.Basic.*;
-import static com.contactapp.controller.ContactAppUtil.apiResponseWriter;
+import static com.contactapp.utils.ContactAppUtil.apiResponseWriter;
 
 public class UserUtil {
 

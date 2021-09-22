@@ -1,4 +1,4 @@
-package com.contactapp.controller;
+package com.contactapp.utils;
 
 import com.contactapp.bean.ApiResponce;
 import com.google.gson.Gson;
